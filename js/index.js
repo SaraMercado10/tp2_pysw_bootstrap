@@ -57,38 +57,38 @@ $(document).ready(function () {
     });
 
     // ======================
-  // Testimonios en Carrusel: Personalización
-  // ======================
-  const carousel = $('#testimonialCarousel');
+    // Testimonios en Carrusel: Personalización
+    // ======================
+    const carousel = $('#testimonialCarousel');
 
-  // Configurar la velocidad del carrusel
-  carousel.on('slide.bs.carousel', function () {
-    const transitionDuration = 800; // Duración de la transición en milisegundos
-    $('.carousel-item').css('transition-duration', `${transitionDuration}ms`);
-  });
+    // Configurar la velocidad del carrusel
+    carousel.on('slide.bs.carousel', function () {
+        const transitionDuration = 800; // Duración de la transición en milisegundos
+        $('.carousel-item').css('transition-duration', `${transitionDuration}ms`);
+    });
 
-  // Habilitar autoplay y pausa al hacer hover
-  let intervalId;
-  const startAutoplay = () => {
-    intervalId = setInterval(() => {
-      carousel.carousel('next');
-    }, 5000); // Cambia de diapositiva cada 5 segundos
-  };
+    // Habilitar autoplay y pausa al hacer hover
+    let intervalId;
+    const startAutoplay = () => {
+        intervalId = setInterval(() => {
+            carousel.carousel('next');
+        }, 5000); // Cambia de diapositiva cada 5 segundos
+    };
 
-  const stopAutoplay = () => {
-    clearInterval(intervalId);
-  };
+    const stopAutoplay = () => {
+        clearInterval(intervalId);
+    };
 
-  // Iniciar autoplay al cargar la página
-  startAutoplay();
+    // Iniciar autoplay al cargar la página
+    startAutoplay();
 
-  // Pausar cuando el usuario pasa el mouse sobre el carrusel
-  carousel.hover(
-    function () {
-      stopAutoplay();
-    },
-    function () {
-      startAutoplay();
-    }
-  );
+    // Pausar cuando el usuario pasa el mouse sobre el carrusel
+    carousel.hover(
+        function () {
+            stopAutoplay();
+        },
+        function () {
+            startAutoplay();
+        }
+    );
 });
