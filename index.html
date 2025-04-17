@@ -94,20 +94,151 @@
             <a href="#" class="social-icon text-white"
               ><i class="fab fa-facebook-f"></i
             ></a>
-            <a href="#" class="social-icon text-white"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon text-white"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="social-icon text-white"
+              ><i class="fab fa-twitter"></i
+            ></a>
           </div>
         </div>
       </nav>
     </header>
+    <!-- Hero Section -->
+    <section id="hero">
+      <!-- Video de Fondo -->
+      <video autoplay muted loop id="hero-video">
+        <source
+          src="./images/video/mixkit-52317-video-52317-hd-ready.mp4"
+          type="video/mp4"
+        />
+        Tu navegador no soporta videos HTML5.
+      </video>
 
-    <!-- Contenido Principal -->
-    <main>
-      <section class="hero">
+      <!-- Overlay Animado -->
+      <div id="hero-overlay"></div>
+
+      <!-- Contenido Centrado -->
+      <div id="hero-content">
         <h1>Bienvenido al Gimnasio</h1>
-      </section>
-    </main>
+        <p>Entrena duro, vive más fuerte. ¡Únete hoy!</p>
+        <a href="#" class="btn btn-primary btn-lg">Comienza Ahora</a>
+      </div>
+    </section>
+    <!-- Clases Destacadas -->
+    <section id="featured-classes">
+      <div class="container py-5">
+        <h2 class="text-center mb-5">Clases Destacadas</h2>
+        <div class="row gy-4">
+          <!-- Tarjeta 1 -->
+          <div class="col-md-4">
+            <div class="card featured-card">
+              <img
+                src="./images/clases/yoga1.jpg"
+                class="card-img-top"
+                alt="Clase de Yoga"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Yoga</h5>
+                <p class="card-text">
+                  Mejora tu flexibilidad y encuentra paz interior. Disfruta.
+                </p>
+                <a href="#" class="btn">Más Información</a>
+              </div>
+            </div>
+          </div>
 
+          <!-- Tarjeta 2 -->
+          <div class="col-md-4">
+            <div class="card featured-card">
+              <img
+                src="./images/clases/spinning1.jpg"
+                class="card-img-top"
+                alt="Clase de Spinning"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Spinning</h5>
+                <p class="card-text">
+                  Quema calorías mientras disfrutas de música energizante.
+                </p>
+                <a href="#" class="btn">Más Información</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="col-md-4">
+            <div class="card featured-card">
+              <img
+                src="./images/clases/crossfit1.jpg"
+                class="card-img-top"
+                alt="Clase de CrossFit"
+              />
+              <div class="card-body">
+                <h5 class="card-title">CrossFit</h5>
+                <p class="card-text">
+                  Entrenamiento intenso para mejorar tu fuerza y resistencia.
+                </p>
+                <a href="#" class="btn">Más Información</a>
+              </div>
+            </div>
+          </div>
+          <!-- Tarjeta 1 -->
+          <div class="col-md-4">
+            <div class="card featured-card">
+              <img
+                src="./images/clases/yoga2.jpg"
+                class="card-img-top"
+                alt="Clase de Yoga"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Yoga</h5>
+                <p class="card-text">
+                  Mejora tu flexibilidad y encuentra paz interior. Disfruta.
+                </p>
+                <a href="#" class="btn">Más Información</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="col-md-4">
+            <div class="card featured-card">
+              <img
+                src="./images/clases/spinning2.jpg"
+                class="card-img-top"
+                alt="Clase de Spinning"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Spinning</h5>
+                <p class="card-text">
+                  Quema calorías mientras disfrutas de música energizante.
+                </p>
+                <a href="#" class="btn">Más Información</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="col-md-4">
+            <div class="card featured-card">
+              <img
+                src="./images/clases/crossfit2.webp"
+                class="card-img-top"
+                alt="Clase de CrossFit"
+              />
+              <div class="card-body">
+                <h5 class="card-title">CrossFit</h5>
+                <p class="card-text">
+                  Entrenamiento intenso para mejorar tu fuerza y resistencia.
+                </p>
+                <a href="#" class="btn">Más Información</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Footer -->
     <footer id="main-footer">
       <p>&copy; 2023 Gimnasio. Todos los derechos reservados.</p>
@@ -118,5 +249,6 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

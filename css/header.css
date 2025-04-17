@@ -1,10 +1,14 @@
+/*Variables*/
 :root{
     --negro: #000000;
     --blanco: #ffffff;
     --naranja: #eb670f;
 }
+
+/*Header Mega-Menu*/
 #main-header {
   position: sticky;
+  top: 0;
   z-index: 1000;
 }
 
@@ -13,10 +17,12 @@
   background-color: black !important;
 }
 
+/*Logo*/
 .navbar-brand img {
   width: 12rem;
 }
 
+/*Enlaces*/
 .navbar-nav .nav-link {
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
@@ -30,6 +36,7 @@
   color: var(--naranja);
 }
 
+/*Menú desplegable*/
 .dropdown-menu.mega-menu {
   display: none;
   position: absolute;
@@ -41,10 +48,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-toggler-icon{
-    filter: invert(1);
-}
-
 .mega-menu li a{
     color: var(--blanco);
     font-family: "Poetsen One", sans-serif;
@@ -53,6 +56,11 @@
 
 .mega-menu li a:hover{
     color: blue;
+}
+
+/*Botón Hamburguesa*/
+.navbar-toggler-icon{
+    filter: invert(1);
 }
 
 .social-icons {
