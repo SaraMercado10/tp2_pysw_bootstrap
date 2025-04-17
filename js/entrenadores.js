@@ -1,45 +1,84 @@
 $(document).ready(function () {
-    // ======================
-    // Animación de Barras de Habilidades
-    // ======================
-    function animateSkillBars() {
-      $('.progress-bar').each(function () {
-        const target = $(this).attr('aria-valuemax'); // Obtiene el valor máximo
-        $(this).animate({ width: target + '%' }, 2000); // Anima el ancho
-      });
+    // 1. Inicialización del sistema de rating (funcionando)
+    $('.rating').each(function () {
+        const rating = parseInt($(this).data('rating'));
+        $(this).empty();
+
+        for (let i = 1; i <= 5; i++) {
+            const star = $('<i class="far fa-star"></i>');
+            if (i <= rating) star.addClass('fas');
+            $(this).append(star);
+        }
+    });
+
+    // 2. Versión definitiva para el flip y barras
+    $('.trainer-card').each(function () {
+        const $card = $(this);
+        let barsLoaded = false;
+
+        // Desktop (hover)
+        $card.hover(
+            function () {
+                if (!isMobile()) {
+                    $card.addClass('flipped');
+                    if (!barsLoaded) {
+                        initializeBars($card);
+                        barsLoaded = true;
+                    }
+                }
+            },
+            function () {
+                if (!isMobile()) {
+                    $card.removeClass('flipped');
+                }
+            }
+        );
+
+        // Móvil (click)
+        $card.on('click', function () {
+            if (isMobile()) {
+                $card.toggleClass('flipped');
+                if ($card.hasClass('flipped') && !barsLoaded) {
+                    initializeBars($card);
+                    barsLoaded = true;
+                }
+            }
+        });
+    });
+
+    // 3. Botón Volver
+    $('.flip-back').on('click', function (e) {
+        e.stopPropagation();
+        $(this).closest('.trainer-card').removeClass('flipped');
+    });
+
+    // Función definitiva para inicializar barras
+    function initializeBars($card) {
+        const $container = $card.find('.progress-bars-container');
+        $container.attr('data-loaded', 'true'); // Actualiza el atributo data-loaded
+
+        $card.find('.progress-bar').each(function () {
+            const $bar = $(this);
+            const width = $bar.data('width');
+
+            // Resetear la barra
+            $bar.css({
+                width: '0%',
+                transition: 'none', // Desactivar transición temporalmente
+            });
+
+            // Forzar render
+            setTimeout(() => {
+                $bar.css({
+                    width: width + '%',
+                    transition: 'width 1.5s ease-in-out', // Reactivar transición
+                });
+            }, 50);
+        });
     }
-  
-    // Iniciar animación cuando el usuario llegue a la sección
-    let barsAnimated = false;
-    $(window).on('scroll', function () {
-      const sectionOffset = $('#skill-bars').offset().top;
-      const windowHeight = $(window).height();
-      const scrollPosition = $(window).scrollTop();
-  
-      if (!barsAnimated && scrollPosition + windowHeight > sectionOffset) {
-        animateSkillBars();
-        barsAnimated = true; // Marca la animación como completada
-      }
-    });
-  
-    // ======================
-    // Manejo del Rating con Estrellas
-    // ======================
-    $('.star-rating label').hover(
-      function () {
-        // Al pasar el mouse sobre una estrella, resalta todas las anteriores
-        $(this).prevAll().addBack().css('color', '#ffcc00');
-      },
-      function () {
-        // Al salir del grupo de estrellas, restaura el color original
-        $('.star-rating label').css('color', '#ccc');
-        $('.star-rating input:checked ~ label').prevAll().addBack().css('color', '#ffcc00');
-      }
-    );
-  
-    // Al hacer clic en una estrella, guarda la selección
-    $('.star-rating input').on('change', function () {
-      const value = $(this).val();
-      console.log(`Calificación seleccionada: ${value}`);
-    });
-  });
+
+    // Función para detectar móviles
+    function isMobile() {
+        return $(window).width() <= 768;
+    }
+});
