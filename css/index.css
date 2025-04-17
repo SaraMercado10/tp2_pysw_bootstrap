@@ -123,3 +123,45 @@
 .featured-card:hover img {
   transform: scale(1.1);
 }
+
+/* Estilos de la Sección Contador Animado */
+#animated-counter {
+  background-color: var(--fondo); /* Fondo blanco */
+}
+
+#animated-counter h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--azul);
+}
+
+/* Estilos de los Contadores */
+.counter-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.counter-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.counter-label {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Efecto Hover en Íconos */
+.counter-item i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.counter-item:hover i {
+  transform: scale(1.2); /* Amplía el ícono */
+  color: #007bff; /* Cambia el color */
+}

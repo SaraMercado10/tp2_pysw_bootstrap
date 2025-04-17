@@ -21,4 +21,38 @@ $(document).ready(function () {
             $(this).find('.card-text').animate({ opacity: 1 }, 200); // Restaura la opacidad del texto
         }
     );
+
+    // ======================
+    // Contador Animado
+    // ======================
+    function animateCounters() {
+        $('.counter-number').each(function () {
+            const target = $(this).data('target'); // Obtiene el valor objetivo
+            const duration = 2000; // Duración total de la animación (en milisegundos)
+            const stepTime = Math.abs(Math.floor(duration / target)); // Tiempo entre cada paso
+            let current = 0;
+
+            const interval = setInterval(() => {
+                if (current >= target) {
+                    clearInterval(interval);
+                    current = target; // Asegura que el número termine en el valor exacto
+                }
+                $(this).text(current); // Actualiza el texto del contador
+                current++; // Incrementa el valor
+            }, stepTime);
+        });
+    }
+
+    // Iniciar la animación cuando el usuario llegue a la sección
+    let countersAnimated = false; // Bandera para evitar múltiples animaciones
+    $(window).on('scroll', function () {
+        const sectionOffset = $('#animated-counter').offset().top;
+        const windowHeight = $(window).height();
+        const scrollPosition = $(window).scrollTop();
+
+        if (!countersAnimated && scrollPosition + windowHeight > sectionOffset) {
+            animateCounters();
+            countersAnimated = true; // Marca la animación como completada
+        }
+    });
 });
