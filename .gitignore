@@ -1,0 +1,101 @@
+# ===============================
+# Ignorar archivos del sistema operativo
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Ignorar archivos de IDEs y editores de texto
+# ===============================
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains (WebStorm, PhpStorm, etc.)
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# Notepad++
+*.bak
+
+# ===============================
+# Ignorar archivos de dependencias
+# ===============================
+# Node.js (si usas npm o yarn)
+node_modules/
+package-lock.json
+yarn.lock
+
+# ===============================
+# Ignorar archivos temporales
+# ===============================
+*.log
+*.tmp
+*.swp
+*.swo
+
+# ===============================
+# Ignorar archivos de compilación
+# ===============================
+# Carpetas de compilación si usas herramientas como SASS, LESS, etc.
+/dist/
+/build/
+
+# Archivos CSS generados automáticamente
+*.min.css
+*.css.map
+
+# Archivos JS generados automáticamente
+*.min.js
+*.js.map
+
+# ===============================
+# Ignorar archivos sensibles
+# ===============================
+# Archivos de configuración con credenciales o datos sensibles
+.env
+.env.local
+.env.development
+.env.production
+
+# ===============================
+# Ignorar archivos específicos del navegador
+# ===============================
+# Chrome DevTools
+*.crdownload
+
+# ===============================
+# Ignorar archivos de pruebas
+# ===============================
+# Carpeta de pruebas si no quieres incluirla en el repositorio
+/test-results/
+
+# ===============================
+# Ignorar archivos de macOS
+# ===============================
+# Iconos de Finder
+.AppleDouble
+.LSOverride
+
+# ===============================
+# Ignorar archivos de Windows
+# ===============================
+# Archivos de Thumbs.db o Desktop.ini
+Desktop.ini
+
+# ===============================
+# Otros archivos innecesarios
+# ===============================
+# Archivos de copia de seguridad
+*~
+*.bak
+*.orig
+
+# Archivos de caché
+.cache/
