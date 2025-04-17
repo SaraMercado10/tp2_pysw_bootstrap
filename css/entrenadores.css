@@ -1,0 +1,162 @@
+/* Variables de color */
+:root {
+  --fondo: #e9eaed;
+  --azul: #0000ff;
+  --fondo-cards: #9b9ea6;
+  --blanco: #ffffff;
+  --naranja: #eb670f;
+}
+
+/* Estilos generales */
+.seccion {
+  background-color: var(--fondo);
+  padding: 2rem 0;
+}
+
+.seccion h1 {
+  color: var(--azul);
+  font-family: "Poetsen One", sans-serif;
+  margin-bottom: 2rem;
+}
+
+/* Efecto Flip en Tarjetas */
+.trainer-card {
+  perspective: 1000px;
+  height: 350px; /* Altura para móviles */
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.trainer-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.trainer-card.flipped .trainer-card-inner {
+  transform: rotateY(180deg);
+}
+
+.trainer-card-front,
+.trainer-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.trainer-card-front {
+  background-color: var(--fondo-cards);
+  color: var(--blanco);
+}
+
+.trainer-card-back {
+  background-color: var(--blanco);
+  color: var(--negro);
+  transform: rotateY(180deg);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trainer-card-front .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.trainer-card-front .card-body {
+  padding: 1rem;
+}
+
+/* Barras de Habilidades */
+.progress {
+  height: 10px;
+  margin-bottom: 1rem;
+  background-color: #e9ecef;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  background-color: var(--naranja);
+  transition: width 1.5s ease-in-out;
+  width: 0;
+}
+
+/* Contenedor de barras (inicialmente oculto) */
+.progress-bars-container[data-loaded="false"] .progress-bar {
+  width: 0 !important;
+}
+
+/* Sistema de Rating */
+.rating {
+  color: #ffc107;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.rating i {
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+/* Botón Volver */
+.flip-back {
+  background-color: var(--naranja);
+  border: none;
+  align-self: center;
+  margin-top: auto;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.flip-back:hover {
+  background-color: #d45d0e;
+}
+
+/* Responsividad */
+@media (min-width: 576px) {
+  .trainer-card {
+    height: 380px;
+  }
+
+  .trainer-card-front .card-img-top {
+    height: 230px;
+  }
+}
+
+@media (min-width: 768px) {
+  .trainer-card {
+    height: 400px;
+  }
+
+  .trainer-card-front .card-img-top {
+    height: 250px;
+  }
+
+  .trainer-card:hover .trainer-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .trainer-card:hover .trainer-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+@media (min-width: 992px) {
+  .trainer-card {
+    height: 420px;
+  }
+
+  .trainer-card-front .card-img-top {
+    height: 270px;
+  }
+}
