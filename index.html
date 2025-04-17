@@ -1,11 +1,493 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="main-header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">
+            <img
+              class="img-fluid"
+              src="./images/logo.png"
+              alt="Logo Gimnasio"
+              width="100"
+            />
+          </a>
+
+          <!-- Botón Toggle para móviles -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Enlaces Centrales -->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="servicesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Servicios
+                </a>
+                <ul
+                  class="dropdown-menu mega-menu"
+                  aria-labelledby="servicesDropdown"
+                >
+                  <li><a class="dropdown-item" href="clases.html">Clases</a></li>
+                  <li><a class="dropdown-item" href="planes.html">Planes</a></li>
+                  <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Iconos de Redes Sociales -->
+          <div class="social-icons d-flex">
+            <a href="#" class="social-icon text-white"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-icon text-white"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="social-icon text-white"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero Section -->
+    <section id="hero">
+      <!-- Video de Fondo -->
+      <video autoplay muted loop id="hero-video">
+        <source
+          src="./images/video/mixkit-52317-video-52317-hd-ready.mp4"
+          type="video/mp4"
+        />
+        Tu navegador no soporta videos HTML5.
+      </video>
+
+      <!-- Overlay Animado -->
+      <div id="hero-overlay"></div>
+
+      <!-- Contenido Centrado -->
+      <div id="hero-content">
+        <h1>Bienvenido al Gimnasio</h1>
+        <p>Entrena duro, vive más fuerte. ¡Únete hoy!</p>
+        <a href="#" class="btn btn-primary btn-lg">Comienza Ahora</a>
+      </div>
+    </section>
+    <!-- Clases Destacadas -->
+    <section id="featured-classes">
+      <div class="container py-3">
+        <h2 class="text-center mb-5">Clases Destacadas</h2>
+        <div class="row gy-4">
+          <!-- Tarjeta 1 -->
+          <div class="col-md-4">
+            <div class="card featured-card">
+              <img
+                src="./images/clases/yoga1.jpg"
+                class="card-img-top"
+                alt="Clase de Yoga"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Yoga</h5>
+                <p class="card-text">
+                  Mejora tu flexibilidad y encuentra paz interior. Disfruta.
+                </p>
+                <a href="#" class="btn">Más Información</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="col-md-4">
+            <div class="card featured-card">
+              <img
+                src="./images/clases/spinning1.jpg"
+                class="card-img-top"
+                alt="Clase de Spinning"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Spinning</h5>
+                <p class="card-text">
+                  Quema calorías mientras disfrutas de música energizante.
+                </p>
+                <a href="#" class="btn">Más Información</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="col-md-4">
+            <div class="card featured-card">
+              <img
+                src="./images/clases/crossfit1.jpg"
+                class="card-img-top"
+                alt="Clase de CrossFit"
+              />
+              <div class="card-body">
+                <h5 class="card-title">CrossFit</h5>
+                <p class="card-text">
+                  Entrenamiento intenso para mejorar tu fuerza y resistencia.
+                </p>
+                <a href="#" class="btn">Más Información</a>
+              </div>
+            </div>
+          </div>
+          <!-- Tarjeta 1 -->
+          <div class="col-md-4">
+            <div class="card featured-card">
+              <img
+                src="./images/clases/yoga2.jpg"
+                class="card-img-top"
+                alt="Clase de Yoga"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Yoga</h5>
+                <p class="card-text">
+                  Mejora tu flexibilidad y encuentra paz interior. Disfruta.
+                </p>
+                <a href="#" class="btn">Más Información</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="col-md-4">
+            <div class="card featured-card">
+              <img
+                src="./images/clases/spinning2.jpg"
+                class="card-img-top"
+                alt="Clase de Spinning"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Spinning</h5>
+                <p class="card-text">
+                  Quema calorías mientras disfrutas de música energizante.
+                </p>
+                <a href="#" class="btn">Más Información</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="col-md-4">
+            <div class="card featured-card">
+              <img
+                src="./images/clases/crossfit2.webp"
+                class="card-img-top"
+                alt="Clase de CrossFit"
+              />
+              <div class="card-body">
+                <h5 class="card-title">CrossFit</h5>
+                <p class="card-text">
+                  Entrenamiento intenso para mejorar tu fuerza y resistencia.
+                </p>
+                <a href="#" class="btn">Más Información</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contador Animado -->
+    <section id="animated-counter">
+      <div class="container">
+        <h2 class="text-center mb-5">Nuestros Logros</h2>
+        <div class="row gy-4 text-center">
+          <!-- Contador 1 -->
+          <div class="col-md-3">
+            <div class="counter-item">
+              <i class="fas fa-users fa-3x mb-3" style="color: #007bff"></i>
+              <h3 class="counter-number" data-target="1500">0</h3>
+              <p class="counter-label">Miembros Activos</p>
+            </div>
+          </div>
+
+          <!-- Contador 2 -->
+          <div class="col-md-3">
+            <div class="counter-item">
+              <i class="fas fa-dumbbell fa-3x mb-3" style="color: #28a745"></i>
+              <h3 class="counter-number" data-target="50">0</h3>
+              <p class="counter-label">Clases Disponibles</p>
+            </div>
+          </div>
+
+          <!-- Contador 3 -->
+          <div class="col-md-3">
+            <div class="counter-item">
+              <i class="fas fa-trophy fa-3x mb-3" style="color: #ffc107"></i>
+              <h3 class="counter-number" data-target="20">0</h3>
+              <p class="counter-label">Premios Ganados</p>
+            </div>
+          </div>
+
+          <!-- Contador 4 -->
+          <div class="col-md-3">
+            <div class="counter-item">
+              <i class="fas fa-heart fa-3x mb-3" style="color: #dc3545"></i>
+              <h3 class="counter-number" data-target="10000">0</h3>
+              <p class="counter-label">Calorías Quemadas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonios en Carrusel -->
+    <section id="testimonials">
+      <div class="container py-2">
+        <h2 class="text-center mb-5">Lo que dicen nuestros clientes</h2>
+
+        <!-- Carrusel de Testimonios -->
+        <div
+          id="testimonialCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <!-- Indicadores -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+
+          <!-- Diapositivas -->
+          <div class="carousel-inner">
+            <!-- Testimonio 1 -->
+            <div class="carousel-item active">
+              <div class="testimonial-card text-center">
+                <img
+                  src="./images/testimonios/mujer1.jpg"
+                  class="testimonial-avatar rounded-circle mx-auto mb-3"
+                  alt="Cliente 1"
+                />
+                <p class="testimonial-text">
+                  "Este gimnasio ha cambiado mi vida. ¡Me siento más fuerte y
+                  saludable!"
+                </p>
+                <h5 class="testimonial-name">María López</h5>
+                <small class="testimonial-title">Entrenadora Personal</small>
+              </div>
+            </div>
+
+            <!-- Testimonio 2 -->
+            <div class="carousel-item">
+              <div class="testimonial-card text-center">
+                <img
+                  src="./images/testimonios/hombre1.jpg"
+                  class="testimonial-avatar rounded-circle mx-auto mb-3"
+                  alt="Cliente 2"
+                />
+                <p class="testimonial-text">
+                  "El ambiente es increíble y los entrenadores son muy
+                  profesionales."
+                </p>
+                <h5 class="testimonial-name">Juan Pérez</h5>
+                <small class="testimonial-title">Atleta Amateur</small>
+              </div>
+            </div>
+
+            <!-- Testimonio 3 -->
+            <div class="carousel-item">
+              <div class="testimonial-card text-center">
+                <img
+                  src="./images/testimonios/mujer2.jpg"
+                  class="testimonial-avatar rounded-circle mx-auto mb-3"
+                  alt="Cliente 3"
+                />
+                <p class="testimonial-text">
+                  "¡Recomiendo este gimnasio a todos mis amigos! Excelente
+                  servicio."
+                </p>
+                <h5 class="testimonial-name">Ana Gómez</h5>
+                <small class="testimonial-title">Estudiante</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="main-footer" class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Formulario de Contacto -->
+          <div class="col-md-6">
+            <h3 class="mb-4">Contáctenos</h3>
+            <form id="contact-form" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Tu nombre"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Por favor, ingresa tu nombre.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="tu@correo.com"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Por favor, ingresa un correo válido.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  placeholder="Escribe tu mensaje"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">
+                  Por favor, ingresa tu mensaje.
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" id="submit-btn">
+                Enviar
+                <span
+                  class="spinner-border spinner-border-sm d-none"
+                  id="spinner"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Mapa -->
+          <div class="col-md-6">
+            <h3 class="mb-4">Ubícanos</h3>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.467103867425!2d-75.5646604257781!3d6.247622328335196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428dfb80ba867%3A0x5a45db22f5c3d79d!2sGimnasio!5e0!3m2!1sen!2sco!4v1696435200000!5m2!1sen!2sco"
+                width="100%"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación del Gimnasio"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <p class="mb-0 small">
+              &copy; 2025 Gimnasio. Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+  </body>
 </html>

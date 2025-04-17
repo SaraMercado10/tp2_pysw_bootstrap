@@ -1,0 +1,65 @@
+/* Estilos del Footer */
+#main-footer {
+  background-color: var(--negro); /* Negro como fondo */
+  color: var(--blanco); /* Texto blanco */
+}
+
+#main-footer h3 {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  color: var(--blanco);
+  margin-bottom: 20px;
+}
+
+/* Formulario */
+#main-footer .form-control {
+  border-radius: 0; /* Bordes rectos */
+  border-color: var(--blanco); /* Borde blanco */
+  background-color: transparent; /* Fondo transparente */
+  color: var(--blanco); /* Texto blanco */
+}
+
+#main-footer .form-control:focus {
+  border-color: var(--naranja); /* Resaltado naranja */
+  box-shadow: 0 0 5px rgba(235, 103, 15, 0.5); /* Sombra naranja */
+}
+
+#main-footer .invalid-feedback {
+  color: red;
+}
+
+/* Botón de Envío */
+#main-footer .btn-primary {
+  background-color: var(--naranja); /* Fondo naranja */
+  border-color: var(--naranja); /* Borde naranja */
+  transition: background-color 0.3s ease;
+}
+
+#main-footer .btn-primary:hover {
+  background-color: #d85d0d; /* Naranja más oscuro */
+  border-color: #d85d0d;
+}
+
+/* Spinner */
+#main-footer .spinner-border {
+  color: var(--blanco); /* Color blanco para el spinner */
+}
+
+/* Mapa */
+.map-container {
+  border: 2px solid var(--naranja); /* Borde naranja */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden;
+}
+
+/* Estilos del Copyright */
+#main-footer .small {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7); /* Texto blanco semi-transparente */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+#main-footer .small:hover {
+  color: var(--naranja); /* Cambia a naranja al pasar el mouse */
+}
