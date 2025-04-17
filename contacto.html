@@ -17,6 +17,7 @@
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -78,8 +79,12 @@
                   class="dropdown-menu mega-menu"
                   aria-labelledby="servicesDropdown"
                 >
-                  <li><a class="dropdown-item" href="clases.html">Clases</a></li>
-                  <li><a class="dropdown-item" href="planes.html">Planes</a></li>
+                  <li>
+                    <a class="dropdown-item" href="clases.html">Clases</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="planes.html">Planes</a>
+                  </li>
                   <li><a class="dropdown-item" href="blog.html">Blog</a></li>
                 </ul>
               </li>
@@ -104,6 +109,110 @@
         </div>
       </nav>
     </header>
+    <!-- Contenido Principal -->
+    <main>
+      <section id="contact-section" class="py-3">
+        <div class="container">
+          <h2 class="text-center mb-3" style="color: blue">Contáctenos</h2>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <!-- Cuadro Contenedor del Formulario -->
+              <div class="form-box p-4">
+                <form id="contact-form" class="needs-validation" novalidate>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="Tu nombre"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Por favor, ingresa tu nombre.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label"
+                      >Correo Electrónico</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="tu@correo.com"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Por favor, ingresa un correo válido.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      rows="4"
+                      placeholder="Escribe tu mensaje"
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">
+                      Por favor, ingresa tu mensaje.
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary" id="submit-btn">
+                    Enviar
+                    <span
+                      class="spinner-border spinner-border-sm d-none"
+                      id="spinner"
+                      role="status"
+                      aria-hidden="true"
+                    ></span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal de Confirmación -->
+    <div
+      class="modal fade"
+      id="confirmationModal"
+      tabindex="-1"
+      aria-labelledby="confirmationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title" id="confirmationModalLabel">
+              ¡Mensaje enviado!
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Tu mensaje ha sido enviado correctamente. ¡Gracias por contactarnos!
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Footer -->
     <footer id="main-footer" class="bg-dark text-white py-5">
       <div class="container">
@@ -198,5 +307,6 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/contacto.js"></script>
   </body>
 </html>

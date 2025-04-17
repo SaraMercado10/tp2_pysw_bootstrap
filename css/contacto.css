@@ -1,0 +1,56 @@
+:root {
+  --fondo: #e9eaed;
+  --azul: #0000ff;
+  --fondo-cards: #9b9ea6;
+  --blanco: #ffffff;
+  --naranja: #eb670f;
+}
+
+#contacto-section {
+  background-color: var(--fondo);
+}
+/* Estilos del Cuadro Contenedor */
+.form-box {
+  background-color: var(--fondo-cards); /* Fondo blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 2rem; /* Espaciado interno */
+}
+
+#contact-form {
+  color: var(--blanco);
+}
+
+/* Estilos del Formulario */
+#contact-form .form-control {
+  border-radius: 0;
+  border-color: var(--naranja);
+  background-color: transparent;
+  color: var(--blanco);
+}
+
+#contact-form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#contact-form .invalid-feedback {
+  color: red;
+}
+
+/* Botón de Envío */
+#contact-form .btn-primary {
+  background-color: var(--naranja);
+  border-color: var(--naranja);
+  transition: background-color 0.3s ease;
+}
+
+#contact-form .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Spinner */
+#contact-form .spinner-border {
+  color: white;
+}
