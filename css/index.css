@@ -165,3 +165,67 @@
   transform: scale(1.2); /* Amplía el ícono */
   color: #007bff; /* Cambia el color */
 }
+
+/* Estilos de la Sección Testimonios */
+#testimonials {
+  background-color: var(--fondo); /* Fondo claro */
+}
+
+#testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--azul);
+}
+
+/* Estilos del Carrusel */
+.carousel-indicators {
+  bottom: -40px; /* Mueve los indicadores hacia abajo */
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+}
+
+.carousel-indicators .active {
+  background-color: #007bff;
+}
+
+/* Estilos de las Tarjetas de Testimonios */
+.testimonial-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: var(--fondo-cards);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #007bff;
+}
+
+.testimonial-text {
+  font-size: 1.2rem;
+  color: var(--blanco);
+  margin-bottom: 15px;
+}
+
+.testimonial-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.testimonial-title {
+  font-size: 1rem;
+  color: var(--blanco);
+}

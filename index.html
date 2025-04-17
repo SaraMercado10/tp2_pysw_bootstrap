@@ -282,6 +282,117 @@
         </div>
       </div>
     </section>
+    <!-- Testimonios en Carrusel -->
+    <section id="testimonials">
+      <div class="container py-2">
+        <h2 class="text-center mb-5">Lo que dicen nuestros clientes</h2>
+
+        <!-- Carrusel de Testimonios -->
+        <div
+          id="testimonialCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <!-- Indicadores -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+
+          <!-- Diapositivas -->
+          <div class="carousel-inner">
+            <!-- Testimonio 1 -->
+            <div class="carousel-item active">
+              <div class="testimonial-card text-center">
+                <img
+                  src="./images/testimonios/mujer1.jpg"
+                  class="testimonial-avatar rounded-circle mx-auto mb-3"
+                  alt="Cliente 1"
+                />
+                <p class="testimonial-text">
+                  "Este gimnasio ha cambiado mi vida. ¡Me siento más fuerte y
+                  saludable!"
+                </p>
+                <h5 class="testimonial-name">María López</h5>
+                <small class="testimonial-title">Entrenadora Personal</small>
+              </div>
+            </div>
+
+            <!-- Testimonio 2 -->
+            <div class="carousel-item">
+              <div class="testimonial-card text-center">
+                <img
+                  src="./images/testimonios/hombre1.jpg"
+                  class="testimonial-avatar rounded-circle mx-auto mb-3"
+                  alt="Cliente 2"
+                />
+                <p class="testimonial-text">
+                  "El ambiente es increíble y los entrenadores son muy
+                  profesionales."
+                </p>
+                <h5 class="testimonial-name">Juan Pérez</h5>
+                <small class="testimonial-title">Atleta Amateur</small>
+              </div>
+            </div>
+
+            <!-- Testimonio 3 -->
+            <div class="carousel-item">
+              <div class="testimonial-card text-center">
+                <img
+                  src="./images/testimonios/mujer2.jpg"
+                  class="testimonial-avatar rounded-circle mx-auto mb-3"
+                  alt="Cliente 3"
+                />
+                <p class="testimonial-text">
+                  "¡Recomiendo este gimnasio a todos mis amigos! Excelente
+                  servicio."
+                </p>
+                <h5 class="testimonial-name">Ana Gómez</h5>
+                <small class="testimonial-title">Estudiante</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </section>
     <!-- Footer -->
     <footer id="main-footer">
       <p>&copy; 2023 Gimnasio. Todos los derechos reservados.</p>
