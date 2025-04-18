@@ -11,10 +11,10 @@
 }
 /* Estilos del Cuadro Contenedor */
 .form-box {
-  background-color: var(--fondo-cards); /* Fondo blanco */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  padding: 2rem; /* Espaciado interno */
+  background-color: var(--fondo-cards); 
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  padding: 2rem; 
 }
 
 #contact-form {

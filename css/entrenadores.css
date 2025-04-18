@@ -22,7 +22,7 @@
 /* Efecto Flip en Tarjetas */
 .trainer-card {
   perspective: 1000px;
-  height: 350px; /* Altura para móviles */
+  height: 350px; 
   margin-bottom: 1.5rem;
   cursor: pointer;
 }

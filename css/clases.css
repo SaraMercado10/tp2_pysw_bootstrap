@@ -22,13 +22,13 @@
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   overflow: hidden;
   position: relative;
-  border: none; /* Eliminar bordes predeterminados de Bootstrap */
+  border: none; 
   background-color: var(--blue-light);
 }
 
 .card:hover {
-  transform: scale(1.05); /* Zoom suave */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra dinámica */
+  transform: scale(1.05); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .card-img-top {
@@ -36,7 +36,7 @@
 }
 
 .card:hover .card-img-top {
-  transform: scale(1.1); /* Zoom en la imagen */
+  transform: scale(1.1); 
 }
 
 /* Overlay con Información Adicional */
@@ -47,31 +47,31 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* Color semi-transparente más claro */
+  background: rgba(0, 0, 0, 0.4); 
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  pointer-events: none; /* Evitar interferencias con clics */
-  z-index: 1; /* Colocar detrás del contenido */
+  pointer-events: none; 
+  z-index: 1; 
 }
 
 .card:hover::after {
-  opacity: 1; /* Muestra el overlay */
+  opacity: 1; 
 }
 
 .card-body {
   position: relative;
-  z-index: 2; /* Asegura que el contenido esté sobre el overlay */
+  z-index: 2; 
 }
 
 .card-title,
 .card-text {
-  color: white; /* Cambiar el color del texto para que sea visible sobre el overlay */
+  color: white; 
   transition: color 0.3s ease-in-out;
 }
 
 .card-footer {
   position: relative;
-  z-index: 2; /* Asegura que el footer esté sobre el overlay */
+  z-index: 2; 
   color: var(--blanco);
 }
 /* Filtros */
