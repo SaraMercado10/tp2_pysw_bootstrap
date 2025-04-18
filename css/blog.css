@@ -1,49 +1,74 @@
-/* Filtros */
-.filter-btn.active {
-    background-color: #0d6efd;
-    color: white;
+:root {
+  --fondo: #e9eaed;
+  --azul: #0000ff;
+  --fondo-cards: #9b9ea6;
+  --blanco: #ffffff;
+  --naranja: #eb670f;
+  --blue-light: #0074d9;
+}
+
+.blog {
+  background-color: var(--fondo);
+}
+
+#filters h2,
+#comments h2 {
+  color: var(--azul);
+}
+/* Altura Uniforme para Tarjetas */
+.card {
+  height: 100%; /* Asegura que las tarjetas ocupen todo el espacio disponible */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave para hover */
+  border: none; /* Elimina bordes predeterminados */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Evita desbordamientos */
+  background-color: var(--fondo-cards); /* Fondo blanco para las tarjetas */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Zoom suave al pasar el mouse */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra dinámica */
+}
+
+.card-img-top {
+  object-fit: cover; /* Asegura que las imágenes no se distorsionen */
+  height: 200px; /* Altura fija para mantener consistencia */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: transform 0.3s ease-in-out; /* Transición suave para la imagen */
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1); /* Zoom ligero en la imagen */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  color: var(--blanco);
+}
+
+.card-text {
+  flex-grow: 1; /* Hace que el texto ocupe el espacio restante */
+  color: var(--blanco);
+}
+
+.card-footer {
+  margin-top: auto; /* Coloca el footer al final de la tarjeta */
+  transition: background-color 0.3s ease-in-out; /* Transición suave para el footer */
+}
+
+.card:hover .card-footer {
+  background-color: #f8f9fa; /* Cambia el color del footer al hacer hover */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 150px; /* Reduce la altura en dispositivos móviles */
   }
-  
-  /* Diseño Tipo Periódico */
-  #article-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-  
+
   .card {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-bottom: 1rem; /* Agrega espacio entre las tarjetas en móviles */
   }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Comentarios con Avatares */
-  .avatar-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 1rem;
-  }
-  
-  .avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .comment-content {
-    flex-grow: 1;
-  }
-  
-  .reply-btn {
-    font-size: 0.875rem;
-  }
+}
