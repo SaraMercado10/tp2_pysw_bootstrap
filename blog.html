@@ -17,6 +17,7 @@
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/blog.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -78,11 +79,17 @@
                   class="dropdown-menu mega-menu"
                   aria-labelledby="servicesDropdown"
                 >
-                  <li><a class="dropdown-item" href="clases.html">Clases</a></li>
                   <li>
-                    <a class="dropdown-item" href="entrenadores.html">Entrenadores</a>
+                    <a class="dropdown-item" href="clases.html">Clases</a>
                   </li>
-                  <li><a class="dropdown-item" href="planes.html">Planes</a></li>
+                  <li>
+                    <a class="dropdown-item" href="entrenadores.html"
+                      >Entrenadores</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="planes.html">Planes</a>
+                  </li>
                   <li><a class="dropdown-item" href="blog.html">Blog</a></li>
                 </ul>
               </li>
@@ -107,6 +114,324 @@
         </div>
       </nav>
     </header>
+    <!-- Contenido Principal -->
+    <main class="blog">
+      <!-- Filtros por Tags -->
+      <section id="filters" class="py-2">
+        <div class="container filtro">
+          <h2 class="text-center mb-3">Filtrar Artículos</h2>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div
+                class="btn-group d-flex flex-wrap justify-content-center"
+                role="group"
+                aria-label="Filtros"
+              >
+                <button
+                  type="button"
+                  class="btn btn-outline-primary filter-btn active"
+                  data-filter="all"
+                >
+                  Todos
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary filter-btn"
+                  data-filter="fitness"
+                >
+                  Fitness
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary filter-btn"
+                  data-filter="nutricion"
+                >
+                  Nutrición
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary filter-btn"
+                  data-filter="yoga"
+                >
+                  Yoga
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary filter-btn"
+                  data-filter="crossfit"
+                >
+                  CrossFit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Diseño Tipo Periódico -->
+      <section id="articles" class="py-4">
+        <div class="container">
+          <div class="row gy-4" id="article-grid">
+            <!-- Artículo 1 - Fitness -->
+            <div class="col-md-4 article fitness">
+              <div class="card h-100" data-aos="fade-up">
+                <img
+                  src="./images/blog/fitness.webp"
+                  class="card-img-top img-fluid"
+                  alt="Artículo de Fitness"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Cómo mejorar tu rutina de ejercicios
+                  </h5>
+                  <p class="card-text">
+                    Descubre consejos prácticos para optimizar tus
+                    entrenamientos diarios.
+                  </p>
+                </div>
+                <div class="card-footer text-muted">
+                  <small><i class="fas fa-tag me-2"></i>Fitness</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Artículo 2 - Fitness -->
+            <div class="col-md-4 article fitness">
+              <div class="card h-100" data-aos="fade-up">
+                <img
+                  src="./images/blog/fitness2.webp"
+                  class="card-img-top img-fluid"
+                  alt="Artículo de Fitness"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Los mejores ejercicios para quemar calorías
+                  </h5>
+                  <p class="card-text">
+                    Aprende qué ejercicios son más efectivos para perder peso
+                    rápidamente.
+                  </p>
+                </div>
+                <div class="card-footer text-muted">
+                  <small><i class="fas fa-tag me-2"></i>Fitness</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Artículo 3 - Fitness -->
+            <div class="col-md-4 article fitness">
+              <div class="card h-100" data-aos="fade-up">
+                <img
+                  src="./images/blog/fitness3.webp"
+                  class="card-img-top img-fluid"
+                  alt="Artículo de Fitness"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Errores comunes en el gimnasio</h5>
+                  <p class="card-text">
+                    Evita estos errores para maximizar tus resultados en el
+                    gimnasio.
+                  </p>
+                </div>
+                <div class="card-footer text-muted">
+                  <small><i class="fas fa-tag me-2"></i>Fitness</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Artículo 4 - Nutrición -->
+            <div class="col-md-4 article nutricion">
+              <div class="card h-100" data-aos="fade-up">
+                <img
+                  src="./images/blog/nutricion1.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Artículo de Nutrición"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    La importancia de una dieta equilibrada
+                  </h5>
+                  <p class="card-text">
+                    Aprende cómo una alimentación saludable puede mejorar tu
+                    rendimiento físico.
+                  </p>
+                </div>
+                <div class="card-footer text-muted">
+                  <small><i class="fas fa-tag me-2"></i>Nutrición</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Artículo 5 - Nutrición -->
+            <div class="col-md-4 article nutricion">
+              <div class="card h-100" data-aos="fade-up">
+                <img
+                  src="./images/blog/nutricion2.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Artículo de Nutrición"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Suplementos deportivos: ¿Son necesarios?
+                  </h5>
+                  <p class="card-text">
+                    Descubre si los suplementos realmente mejoran tu
+                    rendimiento.
+                  </p>
+                </div>
+                <div class="card-footer text-muted">
+                  <small><i class="fas fa-tag me-2"></i>Nutrición</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Artículo 6 - Nutrición -->
+            <div class="col-md-4 article nutricion">
+              <div class="card h-100" data-aos="fade-up">
+                <img
+                  src="./images/blog/nutricion3.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Artículo de Nutrición"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Recetas saludables para después del entrenamiento
+                  </h5>
+                  <p class="card-text">
+                    Prepara estas recetas ricas y nutritivas para recuperarte
+                    después del ejercicio.
+                  </p>
+                </div>
+                <div class="card-footer text-muted">
+                  <small><i class="fas fa-tag me-2"></i>Nutrición</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Artículo 7 - Yoga -->
+            <div class="col-md-4 article yoga">
+              <div class="card h-100" data-aos="fade-up">
+                <img
+                  src="./images/blog/yoga1.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Artículo de Yoga"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Beneficios del yoga para el cuerpo y la mente
+                  </h5>
+                  <p class="card-text">
+                    Explora cómo el yoga puede ayudarte a reducir el estrés y
+                    mejorar tu bienestar general.
+                  </p>
+                </div>
+                <div class="card-footer text-muted">
+                  <small><i class="fas fa-tag me-2"></i>Yoga</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Artículo 8 - Yoga -->
+            <div class="col-md-4 article yoga">
+              <div class="card h-100" data-aos="fade-up">
+                <img
+                  src="./images/blog/yoga2.webp"
+                  class="card-img-top img-fluid"
+                  alt="Artículo de Yoga"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Posturas básicas para principiantes
+                  </h5>
+                  <p class="card-text">
+                    Guía paso a paso para aprender las posturas esenciales del
+                    yoga.
+                  </p>
+                </div>
+                <div class="card-footer text-muted">
+                  <small><i class="fas fa-tag me-2"></i>Yoga</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Artículo 9 - Yoga -->
+            <div class="col-md-4 article yoga">
+              <div class="card h-100" data-aos="fade-up">
+                <img
+                  src="./images/blog/yoga3.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Artículo de Yoga"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Cómo integrar el yoga en tu rutina diaria
+                  </h5>
+                  <p class="card-text">
+                    Consejos prácticos para practicar yoga todos los días sin
+                    complicaciones.
+                  </p>
+                </div>
+                <div class="card-footer text-muted">
+                  <small><i class="fas fa-tag me-2"></i>Yoga</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comentarios con Avatares -->
+      <section id="comments" class="py-3">
+        <div class="container">
+          <h2 class="text-center mb-5">Comentarios</h2>
+          <div class="row gy-4">
+            <!-- Comentario 1 -->
+            <div class="col-md-6 comment">
+              <div class="card">
+                <div class="card-body">
+                  <div class="avatar-container">
+                    <div class="avatar">
+                      <img src="img/avatars/avatar1.jpg" alt="Avatar Usuario" />
+                    </div>
+                    <div class="comment-content">
+                      <h5 class="card-title">María López</h5>
+                      <p class="card-text">
+                        ¡Excelente artículo! Me encantaron los consejos sobre
+                        yoga.
+                      </p>
+                      <button class="btn btn-sm btn-primary reply-btn">
+                        Responder
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Comentario 2 -->
+            <div class="col-md-6 comment">
+              <div class="card">
+                <div class="card-body">
+                  <div class="avatar-container">
+                    <div class="avatar">
+                      <img src="img/avatars/avatar2.jpg" alt="Avatar Usuario" />
+                    </div>
+                    <div class="comment-content">
+                      <h5 class="card-title">Carlos Ramírez</h5>
+                      <p class="card-text">
+                        Muy útil la información sobre nutrición. ¡Gracias!
+                      </p>
+                      <button class="btn btn-sm btn-primary reply-btn">
+                        Responder
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- Footer -->
     <footer id="main-footer" class="bg-dark text-white py-5">
       <div class="container">
@@ -201,5 +526,6 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
   </body>
 </html>
