@@ -162,13 +162,13 @@
 }
 
 .counter-item:hover i {
-  transform: scale(1.2); /* Amplía el ícono */
-  color: #007bff; /* Cambia el color */
+  transform: scale(1.2); 
+  color: #007bff; 
 }
 
 /* Estilos de la Sección Testimonios */
 #testimonials {
-  background-color: var(--fondo); /* Fondo claro */
+  background-color: var(--fondo); 
 }
 
 #testimonials h2 {
@@ -179,7 +179,7 @@
 
 /* Estilos del Carrusel */
 .carousel-indicators {
-  bottom: -40px; /* Mueve los indicadores hacia abajo */
+  bottom: -40px; 
 }
 
 .carousel-indicators button {
