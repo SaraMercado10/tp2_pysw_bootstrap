@@ -79,11 +79,17 @@
                   class="dropdown-menu mega-menu"
                   aria-labelledby="servicesDropdown"
                 >
-                  <li><a class="dropdown-item" href="clases.html">Clases</a></li>
                   <li>
-                    <a class="dropdown-item" href="entrenadores.html">Entrenadores</a>
+                    <a class="dropdown-item" href="clases.html">Clases</a>
                   </li>
-                  <li><a class="dropdown-item" href="planes.html">Planes</a></li>
+                  <li>
+                    <a class="dropdown-item" href="entrenadores.html"
+                      >Entrenadores</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="planes.html">Planes</a>
+                  </li>
                   <li><a class="dropdown-item" href="blog.html">Blog</a></li>
                 </ul>
               </li>
@@ -108,141 +114,367 @@
         </div>
       </nav>
     </header>
-     <!-- Contenido Principal -->
-  <main>
-    <!-- Filtros por Categoría -->
-    <section id="filters" class="py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-5">Filtrar Clases</h2>
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <div class="btn-group d-flex flex-wrap justify-content-center" role="group" aria-label="Filtros">
-              <button type="button" class="btn btn-outline-primary filter-btn active" data-filter="all">Todas</button>
-              <button type="button" class="btn btn-outline-primary filter-btn" data-filter="yoga">Yoga</button>
-              <button type="button" class="btn btn-outline-primary filter-btn" data-filter="crossfit">CrossFit</button>
-              <button type="button" class="btn btn-outline-primary filter-btn" data-filter="pilates">Pilates</button>
-              <button type="button" class="btn btn-outline-primary filter-btn" data-filter="musculacion">Musculación</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Galería Tipo Masonry con Bootstrap Cards -->
-    <section id="gallery" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-5">Nuestras Clases</h2>
-        <div class="row" id="gallery-grid">
-          <!-- Clase 1 -->
-          <div class="col-md-4 col-sm-6 mb-4 yoga">
-            <div class="card h-100">
-              <img src="./images/clases/yoga1.jpg" class="card-img-top" alt="Clase de Yoga">
-              <div class="card-body">
-                <h5 class="card-title">Yoga</h5>
-                <p class="card-text">Relájate y mejora tu flexibilidad.</p>
-              </div>
-              <div class="card-footer text-center">
-                <small class="text-muted"><i class="fas fa-clock me-2"></i> Duración: 60 min</small>
-              </div>
-            </div>
-          </div>
-
-          <!-- Clase 2 -->
-          <div class="col-md-4 col-sm-6 mb-4 crossfit">
-            <div class="card h-100">
-              <img src="img/clases/crossfit.jpg" class="card-img-top" alt="Clase de CrossFit">
-              <div class="card-body">
-                <h5 class="card-title">CrossFit</h5>
-                <p class="card-text">Entrenamiento intenso para mejorar tu fuerza.</p>
-              </div>
-              <div class="card-footer text-center">
-                <small class="text-muted"><i class="fas fa-clock me-2"></i> Duración: 45 min</small>
-              </div>
-            </div>
-          </div>
-
-          <!-- Clase 3 -->
-          <div class="col-md-4 col-sm-6 mb-4 pilates">
-            <div class="card h-100">
-              <img src="img/clases/pilates.jpg" class="card-img-top" alt="Clase de Pilates">
-              <div class="card-body">
-                <h5 class="card-title">Pilates</h5>
-                <p class="card-text">Mejora tu postura y tonifica tu cuerpo.</p>
-              </div>
-              <div class="card-footer text-center">
-                <small class="text-muted"><i class="fas fa-clock me-2"></i> Duración: 50 min</small>
-              </div>
-            </div>
-          </div>
-
-          <!-- Clase 4 -->
-          <div class="col-md-4 col-sm-6 mb-4 musculacion">
-            <div class="card h-100">
-              <img src="img/clases/musculacion.jpg" class="card-img-top" alt="Clase de Musculación">
-              <div class="card-body">
-                <h5 class="card-title">Musculación</h5>
-                <p class="card-text">Desarrolla músculo y fuerza.</p>
-              </div>
-              <div class="card-footer text-center">
-                <small class="text-muted"><i class="fas fa-clock me-2"></i> Duración: 60 min</small>
+    <!-- Contenido Principal -->
+    <main>
+      <!-- Filtros por Categoría -->
+      <section id="filters" class="py-3">
+        <div class="container">
+          <h2 class="text-center mb-3">Filtrar Clases</h2>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div
+                class="btn-group d-flex flex-wrap justify-content-center"
+                role="group"
+                aria-label="Filtros"
+              >
+                <button
+                  type="button"
+                  class="btn btn-outline-primary filter-btn active"
+                  data-filter="all"
+                >
+                  Todas
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary filter-btn"
+                  data-filter="yoga"
+                >
+                  Yoga
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary filter-btn"
+                  data-filter="crossfit"
+                >
+                  CrossFit
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary filter-btn"
+                  data-filter="pilates"
+                >
+                  Pilates
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary filter-btn"
+                  data-filter="musculacion"
+                >
+                  Musculación
+                </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Tabla de Horarios Responsiva -->
-    <section id="schedule" class="py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-5">Horarios de Clases</h2>
-        <div class="table-responsive">
-          <table class="table table-bordered table-hover">
-            <thead class="table-primary">
-              <tr>
-                <th>Hora</th>
-                <th>Lunes</th>
-                <th>Martes</th>
-                <th>Miércoles</th>
-                <th>Jueves</th>
-                <th>Viernes</th>
-                <th>Sábado</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>08:00 - 09:00</td>
-                <td>Yoga</td>
-                <td>CrossFit</td>
-                <td>Pilates</td>
-                <td>Musculación</td>
-                <td>Yoga</td>
-                <td>CrossFit</td>
-              </tr>
-              <tr>
-                <td>09:00 - 10:00</td>
-                <td>CrossFit</td>
-                <td>Pilates</td>
-                <td>Musculación</td>
-                <td>Yoga</td>
-                <td>CrossFit</td>
-                <td>Pilates</td>
-              </tr>
-              <tr>
-                <td>10:00 - 11:00</td>
-                <td>Pilates</td>
-                <td>Musculación</td>
-                <td>Yoga</td>
-                <td>CrossFit</td>
-                <td>Pilates</td>
-                <td>Musculación</td>
-              </tr>
-            </tbody>
-          </table>
+      <!-- Galería Tipo Masonry con Bootstrap Cards -->
+      <section id="gallery" class="py-3">
+        <div class="container">
+          <h2 class="text-center mb-5">Nuestras Clases</h2>
+          <div class="row" id="gallery-grid">
+            <!-- Clase 1 -->
+            <div class="col-md-4 col-sm-6 mb-4 yoga">
+              <div class="card h-100">
+                <img
+                  src="./images/clases/yoga1.jpg"
+                  class="card-img-top"
+                  alt="Clase de Yoga"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Yoga</h5>
+                  <p class="card-text">Relájate y mejora tu flexibilidad.</p>
+                </div>
+                <div class="card-footer text-center">
+                  <small class="text-muted"
+                    ><i class="fas fa-clock me-2"></i> Duración: 60 min</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Clase 2 -->
+            <div class="col-md-4 col-sm-6 mb-4 crossfit">
+              <div class="card h-100">
+                <img
+                  src="./images/clases/crossfit1.jpg"
+                  class="card-img-top"
+                  alt="Clase de CrossFit"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">CrossFit</h5>
+                  <p class="card-text">
+                    Entrenamiento intenso para mejorar tu fuerza.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <small class="text-muted"
+                    ><i class="fas fa-clock me-2"></i> Duración: 45 min</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Clase 3 -->
+            <div class="col-md-4 col-sm-6 mb-4 pilates">
+              <div class="card h-100">
+                <img
+                  src="./images/clases/spinning1.jpg"
+                  class="card-img-top"
+                  alt="Clase de Pilates"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Pilates</h5>
+                  <p class="card-text">
+                    Mejora tu postura y tonifica tu cuerpo.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <small class="text-muted"
+                    ><i class="fas fa-clock me-2"></i> Duración: 50 min</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Clase 4 -->
+            <div class="col-md-4 col-sm-6 mb-4 musculacion">
+              <div class="card h-100">
+                <img
+                  src="./images/clases/musculacion1.webp"
+                  class="card-img-top"
+                  alt="Clase de Musculación"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Musculación</h5>
+                  <p class="card-text">Desarrolla músculo y fuerza.</p>
+                </div>
+                <div class="card-footer text-center">
+                  <small class="text-muted"
+                    ><i class="fas fa-clock me-2"></i> Duración: 60 min</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4 yoga">
+              <div class="card h-100">
+                <img
+                  src="./images/clases/yoga2.jpg"
+                  class="card-img-top"
+                  alt="Clase de Yoga"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Yoga</h5>
+                  <p class="card-text">Relájate y mejora tu flexibilidad.</p>
+                </div>
+                <div class="card-footer text-center">
+                  <small class="text-muted"
+                    ><i class="fas fa-clock me-2"></i> Duración: 60 min</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Clase 2 -->
+            <div class="col-md-4 col-sm-6 mb-4 crossfit">
+              <div class="card h-100">
+                <img
+                  src="./images/clases/crossfit2.webp"
+                  class="card-img-top"
+                  alt="Clase de CrossFit"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">CrossFit</h5>
+                  <p class="card-text">
+                    Entrenamiento intenso para mejorar tu fuerza.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <small class="text-muted"
+                    ><i class="fas fa-clock me-2"></i> Duración: 45 min</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Clase 3 -->
+            <div class="col-md-4 col-sm-6 mb-4 pilates">
+              <div class="card h-100">
+                <img
+                  src="./images/clases/spinning2.jpg"
+                  class="card-img-top"
+                  alt="Clase de Pilates"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Pilates</h5>
+                  <p class="card-text">
+                    Mejora tu postura y tonifica tu cuerpo.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <small class="text-muted"
+                    ><i class="fas fa-clock me-2"></i> Duración: 50 min</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Clase 4 -->
+            <div class="col-md-4 col-sm-6 mb-4 musculacion">
+              <div class="card h-100">
+                <img
+                  src="./images/clases/musculacion2.webp"
+                  class="card-img-top"
+                  alt="Clase de Musculación"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Musculación</h5>
+                  <p class="card-text">Desarrolla músculo y fuerza.</p>
+                </div>
+                <div class="card-footer text-center">
+                  <small class="text-muted"
+                    ><i class="fas fa-clock me-2"></i> Duración: 60 min</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4 yoga">
+              <div class="card h-100">
+                <img
+                  src="./images/clases/yoga3.webp"
+                  class="card-img-top"
+                  alt="Clase de Yoga"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Yoga</h5>
+                  <p class="card-text">Relájate y mejora tu flexibilidad.</p>
+                </div>
+                <div class="card-footer text-center">
+                  <small class="text-muted"
+                    ><i class="fas fa-clock me-2"></i> Duración: 60 min</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Clase 2 -->
+            <div class="col-md-4 col-sm-6 mb-4 crossfit">
+              <div class="card h-100">
+                <img
+                  src="./images/clases/crossfit3.jpg"
+                  class="card-img-top"
+                  alt="Clase de CrossFit"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">CrossFit</h5>
+                  <p class="card-text">
+                    Entrenamiento intenso para mejorar tu fuerza.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <small class="text-muted"
+                    ><i class="fas fa-clock me-2"></i> Duración: 45 min</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Clase 3 -->
+            <div class="col-md-4 col-sm-6 mb-4 pilates">
+              <div class="card h-100">
+                <img
+                  src="./images/clases/pilates.jpg"
+                  class="card-img-top"
+                  alt="Clase de Pilates"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Pilates</h5>
+                  <p class="card-text">
+                    Mejora tu postura y tonifica tu cuerpo.
+                  </p>
+                </div>
+                <div class="card-footer text-center">
+                  <small class="text-muted"
+                    ><i class="fas fa-clock me-2"></i> Duración: 50 min</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Clase 4 -->
+            <div class="col-md-4 col-sm-6 mb-4 musculacion">
+              <div class="card h-100">
+                <img
+                  src="./images/clases/musculacion3.jpeg"
+                  class="card-img-top"
+                  alt="Clase de Musculación"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Musculación</h5>
+                  <p class="card-text">Desarrolla músculo y fuerza.</p>
+                </div>
+                <div class="card-footer text-center">
+                  <small class="text-muted"
+                    ><i class="fas fa-clock me-2"></i> Duración: 60 min</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+
+      <!-- Tabla de Horarios Responsiva -->
+      <section id="schedule" class="py-2">
+        <div class="container">
+          <h2 class="text-center mb-5">Horarios de Clases</h2>
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+              <thead class="table-primary">
+                <tr>
+                  <th>Hora</th>
+                  <th>Lunes</th>
+                  <th>Martes</th>
+                  <th>Miércoles</th>
+                  <th>Jueves</th>
+                  <th>Viernes</th>
+                  <th>Sábado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>08:00 - 09:00</td>
+                  <td>Yoga</td>
+                  <td>CrossFit</td>
+                  <td>Pilates</td>
+                  <td>Musculación</td>
+                  <td>Yoga</td>
+                  <td>CrossFit</td>
+                </tr>
+                <tr>
+                  <td>09:00 - 10:00</td>
+                  <td>CrossFit</td>
+                  <td>Pilates</td>
+                  <td>Musculación</td>
+                  <td>Yoga</td>
+                  <td>CrossFit</td>
+                  <td>Pilates</td>
+                </tr>
+                <tr>
+                  <td>10:00 - 11:00</td>
+                  <td>Pilates</td>
+                  <td>Musculación</td>
+                  <td>Yoga</td>
+                  <td>CrossFit</td>
+                  <td>Pilates</td>
+                  <td>Musculación</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- Footer -->
     <footer id="main-footer" class="bg-dark text-white py-5">
       <div class="container">
