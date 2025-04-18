@@ -1,0 +1,54 @@
+:root {
+  --fondo: #e9eaed;
+  --azul: #0000ff;
+  --fondo-cards: #9b9ea6;
+  --blanco: #ffffff;
+  --naranja: #eb670f;
+  --blue-light: #0074d9;
+}
+.planes {
+  background-color: var(--fondo);
+}
+
+.planes h1 {
+  color: var(--azul);
+}
+
+/* Tarjetas de Precios */
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card .price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+.card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.card button {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card button:hover {
+  background-color: #0b5ed7;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+}
